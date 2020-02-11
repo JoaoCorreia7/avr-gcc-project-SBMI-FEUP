@@ -16,6 +16,6 @@ The PmodALS reports to the host board when the ADC081S021 is placed in normal mo
 
 The servo motor used was the sg-90 microservo and it was controlled with PWM. All the info on how to use PWN with AVR is commented on the servo code. 
 
-Schematic:
+Schematic: 
 
-![Schematic](https://prnt.sc/r0yrp6)
+![Schematic](https://github.com/JoaoCorreia7/avr-gcc-project-SBMI-FEUP/blob/master/Schematic.png)
