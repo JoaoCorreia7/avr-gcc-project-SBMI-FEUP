@@ -8,7 +8,6 @@
 
 void init_servo(void){
 
-  DDRB |= (1 << SERVO_PIN);           // Changes PB1 to output so servo can use it
   TCCR1B = 0;                         // Stop TC1
   TIFR1 = (7<<TOV1)                   // Clear pending intr
         | (1<<ICF1);
@@ -27,7 +26,6 @@ void init_servo(void){
   OCR1A = ICR1 - 375;                 // The PWM pulse will be at the ending of the period.
                                       // 250000/50=5000,  5000/20ms = 250 per ms
 
-  DDRB &= ~(1 << SERVO_PIN);          // Changes PB1 back to input so RFID can use it
   printf("PWM setup completed\n");
   //=========================================//
   //  PWM - 1.0ms/20ms - 0 degrees    (OCR1A = ICR1 - 250)  Values might slightly change in practice
@@ -41,7 +39,7 @@ uint8_t rotate_to_90degrees (void){
   TCCR1A |= 1<<COM1A1 | 1<<COM1A0; // Set OC1A/OC1B on Compare Match, clear OC1A/OC1B at BOTTOM (inverting mode)
   OCR1A = ICR1 - 375;
   _delay_ms(250);
-  TCCR1A &= ~(1<<COM1A1);          // Change PIN 9 to normal operation again so RFID can use it
+  TCCR1A &= ~(1<<COM1A1);          // Change PIN 9 to normal operation
   TCCR1A &= ~(1<<COM1A0);          //
   return 1;
 }
@@ -52,7 +50,7 @@ uint8_t rotate_to_0degrees (void){
   TCCR1A |= 1<<COM1A1 | 1<<COM1A0; // Set OC1A/OC1B on Compare Match, clear OC1A/OC1B at BOTTOM (inverting mode)
   OCR1A = ICR1 - 150;
   _delay_ms(500);
-  TCCR1A &= ~(1<<COM1A1);          // Change PIN 9 to normal operation again so RFID can use it
+  TCCR1A &= ~(1<<COM1A1);          // Change PIN 9 to normal operation again
   TCCR1A &= ~(1<<COM1A0);          //
   return 1;
 }
