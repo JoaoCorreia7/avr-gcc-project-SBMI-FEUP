@@ -18,6 +18,8 @@ The servo motor used was the sg-90 microservo and it was controlled with PWM. Al
 
 Important info as saved RFID cards and current parking lot occupation are saved on the Arduino's eeprom so no information is lost in case of a power loss. 
 
+This project was made on the PlatformIO Extension on VScode, so everything was compiled there and sent to the microcontroller using this extension.
+
 Schematic: 
 
 ![Schematic](https://github.com/JoaoCorreia7/avr-gcc-project-SBMI-FEUP/blob/master/Schematic.png)
