@@ -16,7 +16,7 @@ The PmodALS reports to the host board when the ADC081S021 is placed in normal mo
 
 The servo motor used was the sg-90 microservo and it was controlled with PWM. All the info on how to use PWN with AVR is commented on the servo code. 
 
-Important info as saved RFID cards and current parking lot occupation are saved on the Arduino's eeprom so no information is lost in case of a power loss. 
+Important info such as saved RFID cards and current parking lot occupation are saved on the Arduino's eeprom so no information is lost in case of a power loss. 
 
 This project was made on the PlatformIO Extension on VScode, so everything was compiled there and sent to the microcontroller using this extension.
 
