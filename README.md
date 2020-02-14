@@ -1,6 +1,6 @@
 # avr-gcc-project-SBMI-FEUP
 
-The purpose of this project was to develop our skills with AVR microcontrollers, such as the ATMega328p, more commonly known as the Arduino Uno microcontroller. 
+The purpose of this project was to develop our skills with AVR microcontrollers, such as the ATMega328p, more commonly known as the Arduino Uno microcontroller. The whole project was made without the use of Arduino libraries.
 
 Our project simulates, on a simplified scale, various systems that we are used to see all around us everyday:
 - An ilumination system that activates once there isn't enough brightness;
